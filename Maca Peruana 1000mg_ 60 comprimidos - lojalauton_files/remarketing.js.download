@@ -1,0 +1,52 @@
+
+__RENDER_6_RUNTIME__ = { render: function(){ console.log('Render legacy extension overriden by app vtex.google-shopping-app-api@0.14.0')} };
+window.dataLayer = window.dataLayer || []
+const getLayerByKey = function (dataLayer, key) {
+  let value = null
+  if (Array.isArray(dataLayer) && key) {
+    dataLayer.forEach(layer => {
+      if (layer[key]) {
+        value = layer[key]
+      }
+    })
+  }
+  return value
+}
+
+const productId = getLayerByKey(window.dataLayer, 'productId')
+const skuStocks = getLayerByKey(window.dataLayer, 'skuStocks')
+const productPrice = getLayerByKey(window.dataLayer, 'productPriceTo')
+const productDepartmentName = getLayerByKey(window.dataLayer, 'productDepartmentName')
+const productCategoryName = getLayerByKey(window.dataLayer, 'productCategoryName')
+
+let skuId = null
+let skuStock = 0
+for (var key in skuStocks) {
+  if (skuStocks[key] >= skuStock) {
+    skuStock = skuStocks[key]
+    skuId = key
+  }
+}
+
+if (productId && skuId) {
+  const productDetails = {
+    'send_to': 'AW-10820742630',
+    'ecomm_prodid': `${productId}_${skuId}`,
+    'ecomm_pagetype': 'product',
+    'ecomm_totalvalue': +productPrice,
+    'ecomm_category': (productDepartmentName === productCategoryName) ? productDepartmentName : `${productDepartmentName} | ${productCategoryName}`,
+  }
+
+  console.log(productDetails)
+
+  const scriptUrl = 'https://www.googletagmanager.com/gtag/js?id=AW-10820742630'
+  const convScript = document.createElement('script')
+  convScript.onload = function () {
+    function gtag() { window.dataLayer.push(arguments) }
+    gtag('js', new Date())
+    gtag('config', 'AW-10820742630')
+    gtag('event', 'page_view', productDetails)
+  }
+  convScript.src = scriptUrl
+  document.head.appendChild(convScript)
+}
