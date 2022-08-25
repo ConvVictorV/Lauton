@@ -1,0 +1,93 @@
+<link rel="stylesheet" href="reset.css">
+
+<style id="style-text-cards">
+    #text-cards {
+        gap: 30px;
+    }
+
+    #test-cards .text-card {
+        width: 100%;
+    }
+
+    #text-cards .text-card h3 {
+        font-size: 30px;
+        font-weight: bold;
+        padding-bottom: 15px;
+        text-align: left;
+        color: #6c0404;
+        border-bottom: solid 3px;
+        width: fit-content;
+        margin-bottom: 25px;
+    }
+
+    #text-cards .text-card p,
+    #text-cards .text-card li,
+    #text-cards .text-card b,
+    #text-cards .text-card strong,
+    #text-cards .text-card a {
+        font-weight: 500;
+        line-height: 1.8;
+        letter-spacing: 1px;
+        font-size: 20px;
+    }
+    @media (min-width:1075px) {
+        #text-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+    }
+
+    @media (min-width:560px) and (max-width:1075px) {
+        #text-cards {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    @media (max-width:992px) {
+        #text-cards .text-card h3 {
+            font-size: 16px !important;
+            font-weight: bold;
+            padding-bottom: 15px;
+            text-align: left;
+            color: #6c0404;
+            border-bottom: solid 3px;
+            width: fit-content;
+            margin-bottom: 25px;
+        }
+
+        #text-cards .text-card p,
+        #text-cards .text-card li,
+        #text-cards .text-card b,
+        #text-cards .text-card strong,
+        #text-cards .text-card a {
+            font-weight: 500;
+            line-height: 1.8;
+            letter-spacing: 1px;
+            font-size: 14px !important;
+        }
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <section id="text-cards" class="block-text-cards">
+            <div class="text-card">
+                <h3>Vitamina A</h3>
+                <p>Ajuda em funções, como a manutenção e saúde da pele e das mucosas, ajuda na visão, contribui na
+                    melhora do funcionamento do sistema imune e no metabolismo do ferro e, também, colabora no processo
+                    de diferenciação celular.</p>
+            </div>
+            <div class="text-card">
+                <h3>Vitamina C</h3>
+                <p>Além de ser antioxidante e ajudar no combate dos radicais livres, auxilia com a absorção do ferro dos
+                    alimentos, favorece o fortalecimento do sistema imunológico e colabora na composição do colágeno.
+                    Ainda desempenha o papel de ajudar no metabolismo das proteínas e gorduras.</p>
+            </div>
+            <div class="text-card">
+                <h3>Zinco</h3>
+                <p>Favorece a saúde dos cabelos, pele e unhas, dos ossos, contribui no metabolismo das proteínas,
+                    carboidratos e gorduras, auxilia na síntese de proteínas e, também, no processo de divisão celular.
+                </p>
+            </div>
+        </section>
+    </div>
+</div>

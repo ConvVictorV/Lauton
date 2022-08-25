@@ -1,0 +1,148 @@
+<link rel="stylesheet" href="reset.css">
+
+<style id="style-text-image">
+    @media (min-width: 1075px) {
+        .text-image-left {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .text-image-container {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            padding: 30px 0px;
+        }
+
+        .text-image-right .text-image-container {
+            flex-direction: row-reverse;
+        }
+    }
+
+    @media (max-width: 1075px) {
+        .text-image-left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .text-image-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .text-image-container img {
+            display: block;
+            margin: auto;
+            min-width: 280px;
+            height: auto;
+            max-width: 100%;
+        }
+    }
+
+    .text-image-container picture {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .text-image-container picture img {
+        width: 100%;
+    }
+
+    .text-image-content {
+        width: 100%;
+    }
+
+    .text-image-left,
+    .text-image-right {
+        padding: 30px 0px;
+    }
+
+    .text-image-content ul {
+        padding-left: 15px !important;
+        list-style-type: disc !important;
+    }
+
+    .text-image-content p,
+    .text-image-content li,
+    .text-image-content b,
+    .text-image-content strong,
+    .text-image-content a {
+        font-weight: 500;
+        line-height: 1.8;
+        letter-spacing: 1px;
+        font-size: 20px;
+    }
+
+    .text-image-content h2 {
+        color: #6c0404;
+        padding-bottom: 15px;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+        border-bottom: solid 3px;
+        width: fit-content;
+        margin: auto;
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
+
+    @media (max-width:992px) {
+
+        .text-image-content p,
+        .text-image-content li,
+        .text-image-content b,
+        .text-image-content strong,
+        .text-image-content a {
+            font-size: 14px;
+        }
+
+        .text-image-content h2 {
+            font-size: 20px;
+        }
+    }
+</style>
+
+<!-- text-image-left or text-image-right -->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="text-image-left">
+                <div class="row">
+                    <div class="text-image-container">
+                        <picture>
+                            <!-- <source media="(min-width:465px)" srcset=""> -->
+                            <img src="" alt="" width="463px" height="359px">
+                        </picture>
+                        <div class="text-image-content">
+                            <h2>O que é maca peruana?</h2>
+                            <p>A Maca Peruana é um pequeno tubérculo proveniente da região da Cordilheira dos Andes, no
+                                Peru.</p>
+                            <p>De nome científico <i>Lepidium meyenii</i>, é fonte de alguns nutrientes essenciais como
+                                a vitamina
+                                A,
+                                vitamina C e o Zinco, além de várias outras substâncias bioativas.</p>
+                            <p>Os benefícios da maca peruana estão, cada vez mais, chamando atenção em todo o mundo e
+                                têm gerado a
+                                curiosidade nos pesquisadores, se transformando em objeto de estudos científicos em
+                                diversas
+                                universidades em alguns países.</p>
+                            <p>E isso a tornou um alimento extremamente popular no mercado mundial da saúde e bem-estar.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text-image-content-excess">
+                        <p>Os benefícios da maca peruana estão, cada vez mais, chamando atenção em todo o mundo e têm
+                            gerado a
+                            curiosidade nos pesquisadores, se transformando em objeto de estudos científicos em diversas
+                            universidades
+                            em alguns países.</p>
+                        <p>E isso a tornou um alimento extremamente popular no mercado mundial da saúde e bem-estar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,216 @@
+<link rel="stylesheet" href="reset.css">
+
+<style id="style-faqpage">
+    #faqpage details summary::before {
+        border: solid #6c0404;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        content: '';
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        position: absolute;
+        right: 0px;
+    }
+
+    #faqpage details {
+        position: relative;
+    }
+
+    #faqpage details[open] summary::before {
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+    }
+
+    #faqpage summary {
+        padding: 15px 0px;
+        border-bottom: solid 1px #6c0404;
+        cursor: pointer;
+    }
+
+    #faqpage .answer {
+        padding: 15px 0px;
+    }
+
+    #faqpage {
+        padding: 30px 0px;
+        margin-top: 30px;
+    }
+
+    #faqpage h3 {
+        color: #6c0404;
+        text-transform: uppercase;
+        font-weight: normal;
+        font-size: 20px;
+    }
+
+    #faqpage h2 {
+        color: #6c0404;
+        padding-bottom: 15px;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+        border-bottom: solid 3px;
+        width: fit-content;
+        margin: auto;
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
+
+    #faqpage .answer p,
+    #faqpage .answer li,
+    #faqpage .answer b,
+    #faqpage .answer strong,
+    #faqpage .answer a {
+        font-weight: 500;
+        line-height: 1.8;
+        letter-spacing: 1px;
+        font-size: 20px;
+    }
+
+    @media (max-width:992px) {
+        #faqpage h3 {
+            color: #6c0404;
+            text-transform: uppercase;
+            font-weight: normal;
+            font-size: 16px;
+            padding-right: 30px;
+        }
+
+        #faqpage h2 {
+            color: #6c0404;
+            padding-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+            border-bottom: solid 3px;
+            width: fit-content;
+            margin: auto;
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        #faqpage .answer p,
+        #faqpage .answer li,
+        #faqpage .answer b,
+        #faqpage .answer strong,
+        #faqpage .answer a {
+            font-weight: 500;
+            line-height: 1.8;
+            letter-spacing: 1px;
+            font-size: 14px;
+        }
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <section id="faqpage" class="block-faqpage" itemscope itemtype="https://schema.org/FAQPage">
+            <h2>FAQ - Dúvidas Frequentes</h2>
+            <div class="question-container" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <details>
+                    <summary>
+                        <h3 itemprop="name">Quais os efeitos colaterais da maca peruana?</h3>
+                    </summary>
+                    <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">
+                            Por ser um suplemento alimentar de origem totalmente natural, e não um medicamento, são
+                            raras as
+                            manifestações de alergia ou efeitos colaterais relacionados à Maca Peruana.<br />
+                            Exceto para os alérgicos à planta, a maca peruana Lauton não possui contraindicações nem
+                            orientações sobre interações.<br />
+                            No entanto, pessoas que possuem dúvidas quanto ao seu consumo, é orientado buscar melhores
+                            informações com o nutricionista ou médico de confiança. Inclusive, gestantes, lactantes e
+                            crianças somente devem consumir sob orientação de nutricionista ou médico.
+                        </p>
+                    </div>
+                </details>
+            </div>
+            <div class="question-container" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <details>
+                    <summary>
+                        <h3 itemprop="name">Maca peruana emagrece ou engorda?</h3>
+                    </summary>
+                    <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">
+                            Não. Nem um, nem outro.<br />
+                            A Maca Peruana não possui nem a função de emagrecer, tampouco de engordar, pois não tem
+                            nenhuma
+                            ação termogênica comprovada, tampouco possui macronutrientes (proteínas, carboidratos e
+                            gorduras) que possam oferecer uma grande quantidade de calorias.<br />
+                            Portanto, pode ser consumida tranquilamente por qualquer tipo de pessoa.
+                        </p>
+                    </div>
+                </details>
+            </div>
+            <div class="question-container" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"
+                itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <details>
+                    <summary>
+                        <h3 itemprop="name">Quem não pode tomar maca peruana?</h3>
+                    </summary>
+                    <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">
+                            A maca peruana é um produto 100% natural, vegetal e vegano, e não há contra-indicações aos
+                            diabéticos, cardíacos e hipertensos. Mas no caso de dúvidas, é importante consultar o médico
+                            ou
+                            nutricionista de confiança para melhores esclarecimentos.
+                        </p>
+                    </div>
+                </details>
+            </div>
+            <div class="question-container" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <details>
+                    <summary>
+                        <h3 itemprop="name">Em quanto tempo a maca peruana faz efeito?</h3>
+                    </summary>
+                    <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">
+                            Por ser um suplemento natural, os efeitos benéficos da maca peruana podem não ser sentidos
+                            imediatamente. Em geral, o consumo diário favorece em médio e longo prazo, com efeitos
+                            notados a
+                            partir de quatro semanas.
+                        </p>
+                    </div>
+                </details>
+            </div>
+            <div class="question-container" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <details>
+                    <summary>
+                        <h3 itemprop="name">Pode tomar maca peruana à noite? Qual é o melhor horário?</h3>
+                    </summary>
+                    <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">
+                            A sugestão de consumo é de 2 comprimidos ao dia com água, para ter melhor efeito no
+                            organismo.
+                            Podendo ser ingerido antes do café da manhã, do almoço ou do jantar. O consumo da maca
+                            peruana
+                            pode ser feito em qualquer horário do dia e de acordo com a indicação profissional.
+                            A ingestão de 2 comprimidos garantirá o consumo de 2.000mg de pura Maca Peruana Premium no
+                            organismo da pessoa. No entanto, em alguns casos, o médico poderá receitar doses maiores,
+                            baseando-se individualmente nas necessidades nutricionais de cada pessoa.
+                        </p>
+                    </div>
+                </details>
+            </div>
+            <div class="question-container" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <details>
+                    <summary>
+                        <h3 itemprop="name">Pode usar a maca peruana com outros suplementos?</h3>
+                    </summary>
+                    <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">
+                            A maca peruana não apresenta nenhuma contraindicação se administrada em conjunto com outro
+                            suplemento. Alguns exemplos mais comuns são a <a
+                                href="https://www.lauton.com.br/amora-miura-750mg-clinical-series-lauton-nutrition/p">amora
+                                miura</a>, o <a
+                                href="https://www.lauton.com.br/hialux-acido-hialuronico-60-capsulas/p">ácido
+                                hialurônico em cápsulas</a> e/ou <a
+                                href="https://www.lauton.com.br/colageno-hidrolisado-1000mg-60-capsulas-clinical-series-lauton-nutrition/p">colágeno
+                                hidrolisado</a>.
+                        </p>
+                    </div>
+                </details>
+            </div>
+        </section>
+    </div>
+</div>

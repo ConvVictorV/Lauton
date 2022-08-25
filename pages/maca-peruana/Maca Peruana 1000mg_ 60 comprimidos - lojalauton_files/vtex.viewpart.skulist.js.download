@@ -1,0 +1,70 @@
+﻿var notifymeTitle = "";
+var notifymeUrl = "";
+var notifymeError = "";
+var notifymeSuccess = "";
+var notifymeLoading = "";
+
+function notifymeOnButtomOkClick() {
+    $('.notifyme-button-ok').click(function () {
+        var notifymeskuid = $('.notifyme-skuid').val();
+        var clientName = $('.notifyme-client-name').val();
+        var clientEmail = $('.notifyme-client-email').val();
+        clientName = clientName.replace("Digite seu nome...", "");
+        clientEmail = clientEmail.replace("Digite seu e-mail...", "");
+        if (clientName.length > 0 && notifymeCheckEmail(clientEmail)) {
+            notifymeTitle = $('.notifyme-title').val();
+            notifymeSuccess = $('.notifyme-success').val();
+            notifymeError = $('.notifyme-error').val();
+            notifymeLoading = '<p>' + $('.notifyme-loading').val() + '</p>';
+            var dataToPost = { notifymeClientName: clientName, notifymeClientEmail: clientEmail, notifymeIdSku: notifymeskuid };
+            var url = '/no-cache/AviseMe.aspx';
+            ajaxRequest('POST', url, dataToPost, '.notifyme', '');
+        }
+    });
+}
+
+function ajaxRequest(method, url, postData, target, callback) {
+    $(target).html(notifymeMakeTitle() + notifymeLoading);
+    $.ajax({
+        type: method,
+        url: url,
+        data: postData,
+        success: function (dataResult) {
+            if (target != null && target != '') {
+                $(target).html(dataResult);
+                if (dataResult == 'true') {
+                    $(target).html(notifymeMakeSuccessMessage());
+                } else {
+                    $(target).html(notifymeMakeErrorMessage());
+                };
+            }
+            if (callback != null && callback != '') callback();
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            $(target).html(notifymeMakeErrorMessage());
+        }
+    });
+}
+
+function notifymeMakeSuccessMessage() {
+    return notifymeMakeTitle() + '<fieldset class="success"><label><em>' + notifymeSuccess + '</em></label></fieldset>';
+}
+
+function notifymeMakeTitle() {
+    return '<h3>' + notifymeTitle + '</h3>';
+}
+
+function notifymeMakeErrorMessage() {
+    return notifymeMakeTitle() + '<fieldset class="error"><label>' + notifymeError + '</label></fieldset>';
+}
+
+function notifymeCheckEmail(email) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+        return (true);
+    }
+    notifymeError = "Email inválido, digite novamente";
+    if ($('.notifyme').html().indexOf(notifymeMakeErrorMessage()) == -1) {
+        $('.notifyme').append(notifymeMakeErrorMessage());
+    }
+    return (false);
+}
